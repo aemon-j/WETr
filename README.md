@@ -19,3 +19,21 @@ You can install WETr from Github with:
 # install.packages("devtools")
 devtools::install_github("aemon-j/WETr")
 ```
+## Usage
+
+```{r }
+library(WETr)
+library(gotmtools)
+
+# copy test files to your current wd
+copy_testcase(folder = ".")
+# run WET
+run_wet(sim_folder = ".", yaml_file = "gotm.yaml", verbose = TRUE)
+
+# list available variables
+list_vars("output.nc")
+# load variable to R
+tot_chla <- get_vari(ncdf = "output.nc", var = "wet_chla_calculator_result")
+# plot variable
+plot(tot_chla$Datetime, tot_chla$V14, 'l')
+```
