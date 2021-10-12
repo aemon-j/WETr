@@ -1,0 +1,568 @@
+bottom:
+  MaxItz0b: 1
+  h0b: 0.05
+buoyancy:
+  NN_ini: 0.0001
+  method: 1
+  surf_ini: 0.0
+eq_state:
+  S0: 35.0
+  T0: 10.0
+  dsr0: 0.78
+  dtr0: -0.17
+  method: 2
+  mode: 2
+  p0: 0.0
+fabm:
+  configuration_method: -1
+  debug:
+    no_surface: false
+    save_inputs: false
+  feedbacks:
+    albedo: false
+    bottom_everywhere: true
+    shade: true
+    surface_drag: false
+  freshwater_impact: true
+  numerics:
+    cnpar: 1.0
+    ode_method: 10
+    split_factor: 1
+    w_adv_discr: 6
+  repair_state: true
+  use: true
+grid:
+  ddl: 0.0
+  ddu: 0.0
+  file:
+  method: 0
+  nlev: 18
+light_extinction:
+  A:
+    column: 1
+    constant_value: 0.5235944578047442
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  g1:
+    column: 1
+    constant_value: 0.4100716164946689
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  g2:
+    column: 1
+    constant_value: 5.112034879708199
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  method: 7
+location:
+  depth: 9.0
+  hypsograph: hypsograph.dat
+  latitude: 56.02
+  longitude: 9.53
+  name: Lake Bryrup Langsoe
+mimic_3d:
+  ext_pressure:
+    PeriodM: 44714.0
+    PeriodS: 43200.0
+    dpdx:
+      AmpM: 0.0
+      AmpS: 0.0
+      PhaseM: 0.0
+      PhaseS: 0.0
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    dpdy:
+      AmpM: 0.0
+      AmpS: 0.0
+      PhaseM: 0.0
+      PhaseS: 0.0
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    h:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    mode: 0
+  int_press:
+    dsdx:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    dsdy:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    dtdx:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    dtdy:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    s_adv: false
+    t_adv: false
+  w:
+    adv_discr: 4
+    height:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 1
+      offset: 0.0
+      scale_factor: 1.0
+    max:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+  zeta:
+    amp_1: 1.0
+    amp_2: 0.5
+    column: 1
+    constant_value: 0.0
+    file: waterlevel.dat
+    method: 0
+    offset: 0.0
+    period_1: 44714.0
+    period_2: 43200.0
+    phase_1: 0.0
+    phase_2: 0.0
+    scale_factor: 1.0
+o2:
+  offset: 0.0
+  scale_factor: 31.25
+output:
+  output:
+    format: netcdf
+    groups:
+    k1_start: 1
+    k1_stop: 5
+    k1_stride: 1
+    k_start: 1
+    k_stop: 5
+    k_stride: 1
+    operators:
+    sync_interval: 1
+    time_method: point
+    time_reference:
+    time_start:
+    time_step: 6
+    time_stop:
+    time_unit: hour
+    title: GOTM simulation
+    use: true
+    variables:
+    xtype: default
+physical_constants:
+  avmols: 1.1e-09
+  avmolt: 1.4e-07
+  avmolu: 1.3e-06
+  cp: 3985.0
+  gravity: 9.81
+  rho_0: 1027.0
+restart:
+  allow_missing_variable: false
+  load: false
+salinity:
+  analytical:
+    method: 1
+    obs_NN: 0.000256
+    s_1: 20.0
+    s_2: 15.0
+    z_s1: 30.0
+    z_s2: 40.0
+  column: 1
+  file:
+  method: 0
+  offset: 0.0
+  relax:
+    h_b: 0.0
+    h_s: 0.0
+    tau: 1000000000000000.0
+    tau_b: 1000000000000000.0
+    tau_s: 1000000000000000.0
+  scale_factor: 1.0
+streams:
+  inflow:
+    abiotic_water_sNDOMW:
+      column: 0
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sNH4W:
+      column: 2
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sNO3W:
+      column: 1
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sNPOMW:
+      column: 3
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sPDOMW:
+      column: 0
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sPO4W:
+      column: 4
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sPPOMW:
+      column: 5
+      constant_value: 0.0
+      file: inflow_chem.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    abiotic_water_sSiO2W:
+      column: 1
+      constant_value: 4.0
+      file: inflow_chem_SiO2.dat
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    flow:
+      column: 1
+      constant_value: 0.0
+      file: inflow.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    method: 1
+    salt:
+      column: 1
+      constant_value: -1.0
+      file: salt.dat
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    temp:
+      column: 1
+      constant_value: -1.0
+      file: temp.dat
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    zl: -1.0
+    zu: 0.0
+surface:
+  albedo:
+    constant_value: 0.0
+    method: 1
+  fluxes:
+    heat:
+      column: 1
+      constant_value: -50.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    method: 1
+    tx:
+      column: 1
+      constant_value: 0.01
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    ty:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+  ice:
+    H: 0.0
+    model: 2
+    ocean_ice_flux: 0.0
+  longwave_radiation:
+    column: 1
+    file:
+    method: 1
+    offset: 0.0
+    scale_factor: 1.0
+  meteo:
+    airp:
+      column: 3
+      constant_value: 0.0
+      file: meteo_file.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 100.0
+    airt:
+      column: 4
+      constant_value: 0.0
+      file: meteo_file.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    calc_evaporation: true
+    cloud:
+      column: 6
+      constant_value: 0.0
+      file: meteo_file.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+    hum:
+      column: 5
+      constant_value: 0.0
+      file: meteo_file.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.0
+      type: 3
+    precip:
+      column: 1
+      constant_value: 0.0
+      file:
+      flux_impact: true
+      method: 0
+      offset: 0.0
+      scale_factor: 1.1574e-05
+    ssuv_method: 0
+    swr:
+      column: 1
+      constant_value: 90.0
+      file:
+      method: 3
+      offset: 0.0
+      scale_factor: 0.8921351862183445
+    u10:
+      column: 1
+      constant_value: 0.0
+      file: meteo_file.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 1.064862266652009
+    v10:
+      column: 2
+      constant_value: 0.0
+      file: meteo_file.dat
+      method: 2
+      offset: 0.0
+      scale_factor: 0.6076528874183842
+  roughness:
+    charnock: false
+    charnock_val: 1400.0
+    z0s_min: 0.02
+  sss:
+    column: 1
+    constant_value: 0.0
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  sst:
+    column: 1
+    constant_value: 0.0
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  wave:
+    Hs:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    Tz:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+    phiw:
+      column: 1
+      constant_value: 0.0
+      file:
+      method: 0
+      offset: 0.0
+      scale_factor: 1.0
+temperature:
+  analytical:
+    method: 1
+    obs_NN: 0.000256
+    t_1: 4.0
+    t_2: 15.0
+    z_t1: 30.0
+    z_t2: 40.0
+  column: 1
+  file:
+  method: 1
+  offset: 0.0
+  relax:
+    h_b: 0.0
+    h_s: 0.0
+    tau: 1000000000000000.0
+    tau_b: 1000000000000000.0
+    tau_s: 1000000000000000.0
+  scale_factor: 1.0
+time:
+  cnpar: 1.0
+  dt: 3600.0
+  method: 2
+  start: 1990-01-01 12:00:00
+  stop: 1995-12-31 12:00:00
+title: GOTM simulation
+turbulence:
+  bc:
+    k_lbc: 1
+    k_ubc: 1
+    lbc_type: 1
+    psi_lbc: 1
+    psi_ubc: 1
+    ubc_type: 1
+  epsprof:
+    column: 1
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  generic:
+    compute_param: false
+    cpsi1: 1.0
+    cpsi2: 1.22
+    cpsi3minus: 0.05
+    cpsi3plus: 1.0
+    gen_alpha: -2.0
+    gen_d: -1.2
+    gen_l: 0.2
+    gen_m: 1.0
+    gen_n: -0.67
+    gen_p: 3.0
+    sig_kpsi: 0.8
+    sig_psi: 1.07
+  iw:
+    alpha: 0.7
+    klim: 1.0e-06
+    model: 0
+    nuh: 1.0e-05
+    num: 0.0001
+    numshear: 0.005
+    rich_cr: 0.7
+  keps:
+    ce1: 1.44
+    ce2: 1.92
+    ce3minus: -0.4
+    ce3plus: 1.0
+    sig_e: 1.3
+    sig_k: 1.0
+    sig_peps: false
+  len_scale_method: 8
+  my:
+    e1: 1.8
+    e2: 1.33
+    e3: 1.8
+    length: 3
+    new_constr: false
+    sl: 0.2
+    sq: 0.2
+  scnd:
+    cc1: 3.6
+    cc2: 0.8
+    cc3: 1.2
+    cc4: 1.2
+    cc5: 0.0
+    cc6: 0.3
+    ct1: 3.28
+    ct2: 0.4
+    ct3: 0.4
+    ct4: 0.0
+    ct5: 0.4
+    ctt: 0.8
+    epsb_method: 1
+    kb_method: 1
+    method: 1
+    scnd_coeff: 5
+  stab_method: 3
+  tke_method: 2
+  turb_method: 3
+  turb_param:
+    Prandtl0_fix: 0.74
+    Ri_st: 0.25
+    cm0_fix: 0.5477
+    compute_c3: true
+    compute_kappa: false
+    const_nuh: 0.0005
+    const_num: 0.0005
+    cw: 100.0
+    eps_min: 1.0e-12
+    epsb_min: 1.0e-14
+    galp: 0.53
+    k_min: 3.984478948730743e-08
+    kappa: 0.4
+    kb_min: 1.0e-10
+    length_lim: true
+velocities:
+  relax:
+    ramp: 1000000000000000.0
+    tau: 1000000000000000.0
+  u:
+    column: 1
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+  v:
+    column: 1
+    file:
+    method: 0
+    offset: 0.0
+    scale_factor: 1.0
+water_balance_method: 1

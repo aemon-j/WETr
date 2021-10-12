@@ -1,0 +1,12 @@
+Package: WETr
+Title: Work with GOTM-WET in R
+Version: 0.0.1
+Authors@R: person("Johannes", "Feldbauer", email = "johannes.feldbauer@tu-dresden.de", role = c("aut", "cre"))
+Description: Run GOTM-WET through R. Comes with a compiled version of -WET and uses wrapper functions to enable the calling of GOTM-WET in R.
+Depends: R (>= 3.1.1)
+License: GPL2
+Encoding: UTF-8
+LazyData: true
+Imports: utils
+Suggests:
+RoxygenNote: 7.1.1
