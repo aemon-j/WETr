@@ -84,7 +84,7 @@ run_wetWin <- function(sim_folder, yaml_file = 'gotm.yaml',
 run_wetNIX <- function(sim_folder, verbose=TRUE, args){
   origin <- getwd()
   setwd(sim_folder)
-  wet_path <- system.file('exec/gotmwet_nix', package=packageName())
+  wet_path <- system.file('exec/nixgotm', package=packageName())
   Sys.setenv(LD_LIBRARY_PATH=paste(system.file('extbin/nix',
                                                package=packageName()),
                                    Sys.getenv('LD_LIBRARY_PATH'),
