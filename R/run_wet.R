@@ -52,7 +52,7 @@ run_wetWin <- function(sim_folder, yaml_file = 'gotm.yaml',
                        verbose = TRUE, args){
 
   if(.Platform$r_arch == 'x64'){
-    wet_path <- system.file("extbin/win64WET/gotmwet_release.exe",
+    wet_path <- system.file("extbin/win64WET/gotm_release.exe",
                             package= 'WETr')
   }else{
     stop('No GOTM-WET executable available for your machine yet...')
